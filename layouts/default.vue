@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="tes">
         from defalut
          <slot />
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="text bg-red-500">
         from page/ index
     </div>
 </template>
