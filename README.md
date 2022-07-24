@@ -1,7 +1,7 @@
+[Live Demo](https://candra-herdiana.netlify.app/)
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-[Live Demo](https://candra-herdiana.netlify.app/)
 
 ## Setup
 
