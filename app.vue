@@ -1,11 +1,3 @@
-<template>
-  <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
-</template>
-
 <script setup lang="ts">
 useHead({
   titleTemplate: (titleChunk) => {
@@ -16,3 +8,13 @@ useHead({
   meta: [{ name: "description", content: "My amazing site." }],
 });
 </script>
+
+<template>
+  <Html lang="en-US">
+    <div class="bg-white dark:bg-dark transition duration-300">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </div>
+  </Html>
+</template>

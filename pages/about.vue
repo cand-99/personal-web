@@ -1,20 +1,15 @@
-<script setup lang="ts">
-useHead({
-  title: "My App",
-});
+<script lang="ts" setup>
 definePageMeta({
   pageTransition: {
     name: "fade",
     mode: "out-in",
   },
 })
-
-
 </script>
 
 <template>
-  <div class="text-red-500 dark:text-white">
-    Page: Home
+  <div>
+    Page: About
   </div>
 </template>
 

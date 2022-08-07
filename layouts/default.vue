@@ -1,14 +1,11 @@
+<script setup lang="ts"></script>
+
 <template>
-    <div class="tes">
-        from defalut
-         <slot />
-    </div>
+  <div class="min-h-screen max-w-7xl mx-auto text-gray-900 dark:text-gray-200">
+    <Header />
+    <slot />
+    <Footer />
+  </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
