@@ -30,6 +30,7 @@ const currentStyle = toRef(props, 'type')
       <ListboxButton
         type="button"
         aria-label="Theme"
+        title="Change Theme"
         class="transition-colors duration-300 text-sky-500"
       >
         <span class="flex justify-center items-center dark:hidden">
