@@ -15,7 +15,7 @@ const navBlobClass = computed(() => {
 </script>
 
 <template>
-  <div class="z-10 w-full flex justify-end items-center py-4 lg:py-6 sticky">
+  <div class="z-50 w-full flex justify-end items-center py-4 lg:py-6 sticky">
     <nav
       class="relative z-10 flex space-x-4 md:space-x-6 items-center text-sm md:text-base font-medium"
     >

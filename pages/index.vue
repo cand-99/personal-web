@@ -10,7 +10,7 @@ definePageMeta({
 
 <template>
   <div
-    class="text-center max-w-3xl mx-auto bg-white bg-opacity-20 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl p-32 rounded-3xl"
+    class="text-center max-w-4xl w-full mx-auto bg-white bg-opacity-40 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl p-14 md:p-32 rounded-3xl"
   >
     <p
       class="inline-flex items-center text-center text-lg md:text-2xl text-gray-500 dark:text-gray-300 tracking-wide"
@@ -23,7 +23,7 @@ definePageMeta({
     <p
       class="mt-6 text-lg md:text-xl text-center text-gray-500 dark:text-gray-300 tracking-wide"
     >
-      Frontend Developer | IndieHacker wannabe
+      Frontend Developer
     </p>
     <Button title="About" to="/about" />
   </div>

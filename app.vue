@@ -56,7 +56,7 @@ setMeta("Welcome to My Website 🤩");
       </NuxtLayout>
 
       <div
-        class="z-0 fixed top-0 transform left-1/2 -translate-x-1/2 max-w-screen-lg w-full h-full"
+        class="fixed top-0 transform left-1/2 -translate-x-1/2 max-w-screen-lg w-full h-full "
       >
         <Blob
           :class="blob1Class"
