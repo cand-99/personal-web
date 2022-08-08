@@ -7,6 +7,14 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@headlessui/vue": "^1.6.7",
+    "@heroicons/vue": "^1.0.6",
+    "@nuxtjs/tailwindcss": "^5.3.0",
+    "@vueuse/core": "^9.1.0",
+    "@vueuse/nuxt": "^9.1.0",
     "nuxt": "3.0.0-rc.6"
+  },
+  "dependencies": {
+    "nuxt-icons": "^2.0.1"
   }
 }
