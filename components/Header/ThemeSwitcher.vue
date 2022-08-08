@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import { Listbox, ListboxButton, ListboxLabel, ListboxOptions, ListboxOption} from '@headlessui/vue'
-
 import { IThemeSettingOptions, availableThemes } from '~/utils/theme'
 
-// micro compiler
 const props = defineProps({
   type: {
     type: String,
@@ -11,7 +9,6 @@ const props = defineProps({
   },
 })
 
-// state
 const themeSetting = useState<IThemeSettingOptions>('theme.setting')
 const currentStyle = toRef(props, 'type')
 </script>
