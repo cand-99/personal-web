@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { ITheme, ThemeManager } from "./utils/theme";
+ThemeManager();
+const theme = useState<ITheme>("theme.current");
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} - Site Title` : "Site Title";
@@ -10,7 +13,7 @@ useHead({
 </script>
 
 <template>
-  <Html lang="en-US">
+  <Html :class="`${theme === 'dark' ? 'dark' : ''}`" lang="id">
     <div class="bg-white dark:bg-dark transition duration-300">
       <NuxtLayout>
         <NuxtPage />
