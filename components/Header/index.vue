@@ -13,7 +13,12 @@ import ThemeSwitcher from "./ThemeSwitcher.vue";
       <NuxtLink to="/about">About</NuxtLink>
       <NuxtLink to="/project">Project</NuxtLink>
     </nav>
-    <ThemeSwitcher />
+    <div class="flex items-center border-l border-gray-300 dark:border-gray-800 ml-6 pl-6 transition duration-200 space-x-4">
+      <ThemeSwitcher />
+      <a href="https://github.com/cand-99" target="_blank" rel="noopener noreferrer">
+        <nuxt-icon name="github" class="text-xl text-gray-600 dark:text-gray-400"/>
+      </a>
+    </div>
   </div>
 </template>
 

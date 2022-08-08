@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Listbox, ListboxButton, ListboxLabel, ListboxOptions, ListboxOption} from '@headlessui/vue'
-import { SunIcon, MoonIcon, ClockIcon, DesktopComputerIcon } from "@heroicons/vue/outline";
+
 import { IThemeSettingOptions, availableThemes } from '~/utils/theme'
 
 // micro compiler
@@ -17,7 +17,7 @@ const currentStyle = toRef(props, 'type')
 </script>
  
 <template>
-  <div class="flex items-center border-l border-gray-300 dark:border-gray-800 ml-6 pl-6 transition duration-200">
+  <div class="flex items-center">
     <Listbox
       v-if="currentStyle === 'dropdown-right-top'"
       v-model="themeSetting"
@@ -30,13 +30,13 @@ const currentStyle = toRef(props, 'type')
       <ListboxButton
         type="button"
         aria-label="Theme"
-        class="transition-colors duration-300"
+        class="transition-colors duration-300 text-sky-500"
       >
         <span class="flex justify-center items-center dark:hidden">
-           <SunIcon class="h-5 w-5" />
+          <nuxt-icon name="sun" fill class="text-xl stroke-2" />
         </span>
         <span class="justify-center items-center hidden dark:flex">
-             <MoonIcon class="h-5 w-5" />
+          <nuxt-icon name="moon" fill clas class="text-xl stroke-2" />
         </span>
       </ListboxButton>
       <ListboxOptions
@@ -54,11 +54,11 @@ const currentStyle = toRef(props, 'type')
               themeSetting !== theme.key,
           }"
         >
-          <span class="text-sm mr-2 flex items-center">
-            <SunIcon class="h-5 w-5" v-if="theme.key === 'light'" />
-            <MoonIcon class="h-5 w-5" v-else-if="theme.key === 'dark'" />
-            <DesktopComputerIcon class="h-5 w-5" v-else-if="theme.key === 'system'" />
-            <ClockIcon class="h-5 w-5" v-else-if="theme.key === 'realtime'" />
+          <span class="text-lg stroke-2 mr-2 flex items-center">
+            <nuxt-icon name="sun" fill v-if="theme.key === 'light'" />
+            <nuxt-icon name="moon" fill v-else-if="theme.key === 'dark'" />
+            <nuxt-icon name="desktop" fill  v-else-if="theme.key === 'system'" />
+            <nuxt-icon name="clock" fill v-else-if="theme.key === 'realtime'" />
           </span>
           {{ theme.text }}
         </ListboxOption>

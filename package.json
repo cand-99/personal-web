@@ -13,5 +13,8 @@
     "@vueuse/core": "^9.1.0",
     "@vueuse/nuxt": "^9.1.0",
     "nuxt": "3.0.0-rc.6"
+  },
+  "dependencies": {
+    "nuxt-icons": "^2.0.1"
   }
 }
