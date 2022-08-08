@@ -12,7 +12,7 @@ const isLoading = ref(true)
 </script>
 
 <template>
-  <div class="z-10 w-full flex justify-end items-center py-6 py:mb-12">
+  <div class="z-10 w-full flex justify-end items-center py-4 lg:py-8">
     <nav
       class="relative flex space-x-4 md:space-x-6 items-center text-base md:text-lg"
     >
@@ -29,7 +29,7 @@ const isLoading = ref(true)
           <!-- <nuxt-icon v-if="isDark" name="moon" />
           <nuxt-icon v-else name="sun" /> -->
           <div v-if="!isLoading">
-            <SunIcon class="h-4 w-4" v-if="isDark" />
+            <SunIcon class="h-4 w-4" v-if="!isDark" />
             <MoonIcon class="h-4 w-4" v-else />
           </div>
         </transition>
