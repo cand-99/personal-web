@@ -1,7 +1,4 @@
 <script setup lang="ts">
-useHead({
-  title: "My App",
-});
 definePageMeta({
   pageTransition: {
     name: "fade",
