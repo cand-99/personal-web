@@ -38,7 +38,7 @@ useHead(() => ({
     >
       Frontend Developer
     </p>
-    <Button title="About" to="/about" />
+    <Button :title="t('pages.about.nav')" to="/about" />
   </div>
 </template>
 
