@@ -8,6 +8,16 @@ definePageMeta({
 });
 
 const { t } = useLang()
+
+useHead(() => ({
+  title: t('pages.about.title'),
+  meta: [
+    {
+      name: 'description',
+      content: t('pages.blank.description'),
+    },
+  ],
+}))
 </script>
 
 <template>
@@ -32,7 +42,7 @@ const { t } = useLang()
       <div class="flex text-left mt-6 justify-between flex-col md:flex-row">
         <div class="w-full md:w-2/5">
           <h5 class="title">Languange/Framework</h5>
-          <p class="flex flex-wrap text-gray-400 text-4xl gap-2">
+          <p class="flex flex-wrap text-gray-400 dark:text-gray-300 text-4xl gap-3">
             <nuxt-icon name="vue" />
             <nuxt-icon name="nuxt" />
             <nuxt-icon name="tailwindcss" />
@@ -44,7 +54,7 @@ const { t } = useLang()
             <ul>
               <li>Tasikmalaya, Jawabarat</li>
               <li>99cand@gmail.com</li>
-              <li class="flex gap-4 mt-4 text-4xl text-gray-400">
+              <li class="flex gap-4 mt-4 text-4xl text-gray-400 dark:text-gray-300">
                 <a href="https://github.com/cand-99" target="_blank" rel="noopener noreferrer">
                   <nuxt-icon name="github" />
                 </a>

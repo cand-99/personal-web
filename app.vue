@@ -5,9 +5,10 @@ ThemeManager();
 LanguageManager();
 const theme = useState<ITheme>("theme.current");
 const locale = useState<string>('locale.setting')
+const { t } = useLang()
 
 const { setMeta } = useCustomMeta();
-setMeta("Welcome to My Website 🤩");
+setMeta(t('pages.index.title'));
 </script>
 
 <template>

@@ -13,11 +13,11 @@ pages:
     im: Saya
     nav: Beranda
   about:
+    title: Tentang - Candra Herdiana
     nav: Tentang
-    title: tentang
     description: ini adalah halaman tentang
   project:
     nav: Proyek
-    title: tentang
+    title: Proyek - Candra Herdiana
     description: ini adalah halaman tentang
  

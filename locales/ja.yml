@@ -13,11 +13,11 @@ pages:
     im: 私
     nav: 家
   about:
+    title: 約 - Candra Herdiana
     nav: 約
-    title: 約
     description: これは概要ページです
   project:
     nav: 事業
-    title: tentang
+    title: 事業 - Candra Herdiana
     description: ini adalah halaman tentang
  

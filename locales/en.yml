@@ -5,18 +5,18 @@ components:
     theme: theme
     change_theme: change theme
 pages:
+  404:
+    title: page not found
   index:
     title: Home - Candra Herdiana
     hi: Hi
     im: I am
     nav: Home
-  404:
-    title: page not found
   about:
+    title: About - Candra Herdiana
     nav: About
-    title: about
     description: this is a about page
   project:
     nav: Project
-    title: tentang
+    title: Project - Candra Herdiana
     description: ini adalah halaman tentang

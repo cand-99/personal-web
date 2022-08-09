@@ -10,6 +10,15 @@ definePageMeta({
   },
 });
 
+useHead(() => ({
+  title: t('pages.index.title'),
+  meta: [
+    {
+      name: 'description',
+      content: t('pages.blank.description'),
+    },
+  ],
+}))
 </script>
 
 <template>
