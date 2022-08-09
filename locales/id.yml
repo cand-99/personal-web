@@ -16,6 +16,9 @@ pages:
     title: Tentang - Candra Herdiana
     nav: Tentang
     description: ini adalah halaman tentang
+    basic: Dasar
+    contact: Kontak
+    framework: Bahasa/Kerangka
   project:
     nav: Proyek
     title: Proyek - Candra Herdiana

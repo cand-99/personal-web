@@ -16,6 +16,9 @@ pages:
     title: About - Candra Herdiana
     nav: About
     description: this is a about page
+    basic: Basic
+    contact: Contact
+    framework: Languange/Framework
   project:
     nav: Project
     title: Project - Candra Herdiana

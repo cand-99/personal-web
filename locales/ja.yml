@@ -16,6 +16,9 @@ pages:
     title: 約 - Candra Herdiana
     nav: 約
     description: これは概要ページです
+    basic: 基本
+    contact: コンタクト
+    framework: 言語/フレームワーク
   project:
     nav: 事業
     title: 事業 - Candra Herdiana

@@ -16,6 +16,9 @@ pages:
     title: ~에 대한 - Candra Herdiana
     nav: ~에 대한
     description: 이것은 페이지에 관한 것입니다
+    basic: 기초적인
+    contact: 연락하다
+    framework: 언어/프레임워크
   project:
     nav: 프로젝트
     title: 프로젝트 - Candra Herdiana

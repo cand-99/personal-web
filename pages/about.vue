@@ -17,12 +17,12 @@ const { t } = useLang();
 
 useHead(() => ({
   title: t("pages.about.title"),
-  meta: [
-    {
-      name: "description",
-      content: t("pages.blank.description"),
-    },
-  ],
+  // meta: [
+  //   {
+  //     name: "description",
+  //     content: t("pages.blank.description"),
+  //   },
+  // ],
 }));
 
 const tools = computed((): ITools[] => [
@@ -47,7 +47,7 @@ const tools = computed((): ITools[] => [
 
 <template>
   <section
-    class="text-center max-w-4xl w-full mx-auto bg-white bg-opacity-40 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl py-8 px-6 md:p-32 rounded-3xl"
+    class="text-center max-w-4xl w-full mx-auto bg-white bg-opacity-40 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl py-8 px-1 md:p-32 rounded-3xl"
   >
     <h1 class="font-bold text-5xl md:text-7xl text-center tracking-tight">
       Candra
@@ -59,8 +59,8 @@ const tools = computed((): ITools[] => [
     </h2>
     <div>
       <div class="text-left mt-4">
-        <h5 class="title">Basic</h5>
-        <p class="text-gray-500 dark:text-gray-400">
+        <h5 class="title">{{ $t('pages.about.basic') }}</h5>
+        <p class="text-gray-500 dark:text-gray-400 text-sm md:text-base">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto
           asperiores ipsam quos, ipsum placeat voluptas praesentium maxime
           dignissimos eum impedit ea laborum tempore quidem? Non a laborum
@@ -70,7 +70,7 @@ const tools = computed((): ITools[] => [
       </div>
       <div class="flex text-left mt-6 justify-between flex-col md:flex-row">
         <div class="w-full md:w-2/5">
-          <h5 class="title">Languange/Framework</h5>
+          <h5 class="title">{{ $t('pages.about.framework') }}</h5>
           <p
             class="flex flex-wrap text-gray-400 dark:text-gray-300 text-4xl gap-3"
           >
@@ -87,12 +87,12 @@ const tools = computed((): ITools[] => [
           </p>
         </div>
         <div class="w-full md:w-2/5 mt-6 md:mt-0">
-          <h5 class="title">Contact</h5>
-          <ul class="text-gray-500 dark:text-gray-400">
+          <h5 class="title">{{ $t('pages.about.contact') }}</h5>
+          <ul class="text-gray-500 dark:text-gray-400 text-sm md:text-base">
             <li>Tasikmalaya, Jawabarat</li>
             <li>99cand@gmail.com</li>
             <li
-              class="flex gap-4 mt-4 text-4xl text-gray-400 dark:text-gray-300"
+              class="flex gap-4 mt-4 text-3xl md:text-4xl text-gray-400 dark:text-gray-300"
             >
               <a
                 href="https://github.com/cand-99"
