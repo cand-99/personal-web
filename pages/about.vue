@@ -6,6 +6,8 @@ definePageMeta({
     mode: "out-in",
   },
 });
+
+const { t } = useLang()
 </script>
 
 <template>
