@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/solid";
+// composable
+const { t } = useLang()
+
+//meta
 definePageMeta({
   pageTransition: {
     name: "fade",
     mode: "out-in",
   },
 });
+
 </script>
 
 <template>
@@ -15,9 +19,9 @@ definePageMeta({
     <p
       class="inline-flex items-center text-center text-lg md:text-2xl text-gray-500 dark:text-gray-300 tracking-wide"
     >
-      Hi
+      {{ $t('pages.index.hi') }}
       <span class="wave text-5xl mx-3 max-2">👋🏻</span>
-      I am
+      {{ $t('pages.index.im') }}
     </p>
     <h1 class="text-6xl md:text-8xl font-bold my-4 tracking-tight">Candra</h1>
     <p

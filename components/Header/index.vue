@@ -19,13 +19,13 @@ const navBlobClass = computed(() => {
     <nav
       class="relative z-10 flex space-x-4 md:space-x-6 items-center text-sm md:text-base font-medium"
     >
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/about">About</NuxtLink>
-      <NuxtLink to="/project">Project</NuxtLink>
+      <NuxtLink to="/">{{ $t('pages.index.nav') }}</NuxtLink>
+      <NuxtLink to="/about">{{ $t('pages.about.nav') }}</NuxtLink>
+      <NuxtLink to="/project">{{ $t('pages.project.nav') }}</NuxtLink>
       <Blob :class="navBlobClass" class="w-7 h-7 -top-1 blur-xl" />
     </nav>
     <div
-      class="flex items-center border-l border-gray-300 dark:border-gray-800 ml-3 pl-3 md:ml-6 md:pl-6 transition duration-200 space-x-4"
+      class="flex items-center justify-center border-l border-gray-300 dark:border-gray-800 ml-3 pl-3 md:ml-6 md:pl-6 transition duration-200 space-x-4"
     >
       <HeaderLanguageSwitcher />
       <HeaderThemeSwitcher />

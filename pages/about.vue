@@ -44,7 +44,7 @@ const { t } = useLang()
             <ul>
               <li>Tasikmalaya, Jawabarat</li>
               <li>99cand@gmail.com</li>
-              <li class="flex gap-4 mt-2 text-4xl text-gray-400">
+              <li class="flex gap-4 mt-4 text-4xl text-gray-400">
                 <a href="https://github.com/cand-99" target="_blank" rel="noopener noreferrer">
                   <nuxt-icon name="github" />
                 </a>

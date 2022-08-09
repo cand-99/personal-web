@@ -19,6 +19,7 @@ const props = defineProps({
 // state
 const currentStyle = toRef(props, "type");
 const localeSetting = useState<string>("locale.setting");
+
 </script>
 
 <template>
@@ -29,8 +30,8 @@ const localeSetting = useState<string>("locale.setting");
       as="div"
       class="relative flex items-center"
     >
-      <ListboxLabel class="sr-only">Theme</ListboxLabel>
-      <ListboxButton type="button" title="Change Language" class="text-xl">
+      <ListboxLabel class="sr-only">{{ $t('components.language_switcher.change_language') }}</ListboxLabel>
+      <ListboxButton type="button" :title="$t('components.language_switcher.change_language')" class="text-xl">
         <nuxt-icon name="language" fill />
       </ListboxButton>
       <ListboxOptions
