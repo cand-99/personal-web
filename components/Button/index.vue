@@ -13,7 +13,7 @@ const props = defineProps<ButtonProps>()
 <template>
   <NuxtLink
       :to="to"
-      class="inline-flex items-center mt-12 bg-gray-900 dark:bg-black py-3 px-6 text-white rounded-xl text-xl font-medium"
+      class="inline-flex items-center mt-12 bg-gray-900 dark:bg-black py-3 px-6 text-white rounded-xl text-lg md:text-xl font-medium"
     >
       {{ title }} <ArrowRightIcon class="h-5 w-5 ml-3" />
     </NuxtLink>
