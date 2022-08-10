@@ -5,8 +5,11 @@ components:
     theme: 주제
     change_theme: 테마 변경
 pages:
-  '404':
-    title: 페이지를 찾을 수 없습니다
+  404:
+    title: 페이지를 찾을 수 없음
+    error: 앗! 뭔가 잘못
+    description: 귀하가 요청한 페이지는 현재 존재하지 않습니다
+    button: 홈으로
   index:
     title: 집 - Candra Herdiana
     hi: 안녕하십니까

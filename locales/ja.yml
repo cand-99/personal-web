@@ -5,8 +5,11 @@ components:
     theme: テーマ
     change_theme: テーマを変更する
 pages:
-  '404':
+  404:
     title: ページが見つかりません
+    error: おっとっと！何か問題でも
+    description: リクエストしたページは現在存在しません
+    button: 家に帰る
   index:
     title: 家 - Candra Herdiana
     hi: こんにちは

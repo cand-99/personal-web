@@ -6,7 +6,10 @@ components:
     change_theme: ganti tema
 pages:
   404:
-    title: halaman tidak ditemukan
+    title: Halaman tidak ditemukan
+    error: Ups! ada yang tidak beres
+    description: Halaman yang Anda minta tidak ada saat ini
+    button: Kembali ke beranda
   index:
     title: Beranda - Candra Herdiana
     hi: Hallo

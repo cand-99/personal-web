@@ -6,7 +6,10 @@ components:
     change_theme: change theme
 pages:
   404:
-    title: page not found
+    title: Page not found
+    error: Oops! something wrong
+    description: The page that you requsted doesn’t exist at this moment
+    button: Back to Home
   index:
     title: Home - Candra Herdiana
     hi: Hi
