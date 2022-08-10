@@ -59,7 +59,7 @@ const tools = computed((): ITools[] => [
     </h2>
     <div>
       <div class="text-left mt-4">
-        <h5 class="title">{{ $t('pages.about.basic') }}</h5>
+        <h1 class="title">{{ $t('pages.about.basic') }}</h1>
         <p class="text-gray-500 dark:text-gray-400 text-sm md:text-base">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto
           asperiores ipsam quos, ipsum placeat voluptas praesentium maxime
@@ -70,7 +70,7 @@ const tools = computed((): ITools[] => [
       </div>
       <div class="flex text-left mt-6 justify-between flex-col md:flex-row">
         <div class="w-full md:w-2/5">
-          <h5 class="title">{{ $t('pages.about.framework') }}</h5>
+          <h1 class="title">{{ $t('pages.about.framework') }}</h1>
           <p
             class="flex flex-wrap text-gray-400 dark:text-gray-300 text-4xl gap-3"
           >
@@ -78,6 +78,7 @@ const tools = computed((): ITools[] => [
               v-for="tool in tools"
               :key="tool.icon"
               :href="tool.link"
+              :aria-label="tool.icon"
               class="hover:text-gray-600 dark:hover:text-gray-100"
               target="_blank"
               rel="noopener noreferrer"
@@ -87,7 +88,7 @@ const tools = computed((): ITools[] => [
           </p>
         </div>
         <div class="w-full md:w-2/5 mt-6 md:mt-0">
-          <h5 class="title">{{ $t('pages.about.contact') }}</h5>
+          <h1 class="title">{{ $t('pages.about.contact') }}</h1>
           <ul class="text-gray-500 dark:text-gray-400 text-sm md:text-base">
             <li>Tasikmalaya, Jawabarat</li>
             <li>99cand@gmail.com</li>
@@ -96,16 +97,18 @@ const tools = computed((): ITools[] => [
             >
               <a
                 href="https://github.com/cand-99"
-                 class="hover:text-gray-600 dark:hover:text-gray-100"
+                class="hover:text-gray-600 dark:hover:text-gray-100"
                 target="_blank"
+                aria-label="github"
                 rel="noopener noreferrer"
               >
                 <nuxt-icon name="github" />
               </a>
               <a
                 href="https://www.instagram.com/candfpv"
-                 class="hover:text-gray-600 dark:hover:text-gray-100"
+                class="hover:text-gray-600 dark:hover:text-gray-100"
                 target="_blank"
+                aria-label="instagram"
                 rel="noopener noreferrer"
               >
                 <nuxt-icon name="instagram" />
