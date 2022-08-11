@@ -118,7 +118,7 @@ const tools = computed((): ITools[] => [
         </div>
       </div>
     </div>
-    <Button :title="t('pages.project.nav')" to="/project" />
+    <Button :title="t('pages.project.nav')" icon="arrow-right" to="/project" class="mt-12" />
   </section>
 </template>
 

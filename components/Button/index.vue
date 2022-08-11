@@ -2,8 +2,9 @@
 import { ArrowRightIcon } from "@heroicons/vue/solid";
 
 interface ButtonProps{
-  title: string
+  title: string;
   to: string;
+  icon: string;
 }
 
 const props = defineProps<ButtonProps>()
@@ -13,10 +14,14 @@ const props = defineProps<ButtonProps>()
 <template>
   <NuxtLink
       :to="to"
-      class="inline-flex items-center mt-12 bg-gray-900 dark:bg-black py-3 px-6 text-white rounded-xl text-lg md:text-xl font-medium"
+      class="inline-flex items-center bg-gray-900 dark:bg-black py-3 px-6 text-white rounded-xl text-lg md:text-xl font-medium"
     >
-      {{ title }} <ArrowRightIcon class="h-5 w-5 ml-3" />
+      {{ title }} <nuxt-icon :name="icon" class="ml-3" />
     </NuxtLink>
 </template>
 
-<style scoped></style>
+<style scoped>
+.nuxt-icon{
+  @apply mb-0;
+}
+</style>
