@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import Card from '~~/components/Project/Card.vue';
 definePageMeta({
   pageTransition: {
     name: "fade",
@@ -20,8 +21,16 @@ useHead(() => ({
 </script>
 
 <template>
-  <div>
-    Page: Project
+  <div class="">
+     <h1 class="font-bold text-5xl md:text-7xl text-center tracking-tight mb-8">
+      Project
+    </h1>
+    <div class="space-y-8 my-4">
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+    </div>
+    
   </div>
 </template>
 
