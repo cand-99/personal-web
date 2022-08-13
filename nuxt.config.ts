@@ -13,7 +13,8 @@ export default defineNuxtConfig({
       '@nuxtjs/tailwindcss',
       '@vueuse/nuxt',
       'nuxt-icons',
-      '@intlify/nuxt3'
+      '@intlify/nuxt3',
+      '@nuxt/image-edge',
     ],
 
     css: [
@@ -30,4 +31,9 @@ export default defineNuxtConfig({
         availableLocales: ['en', 'id', 'ja', 'ko'],
       },
     },
+
+    image: {
+      // The screen sizes predefined by `@nuxt/image`:
+   
+    }
 })
