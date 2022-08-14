@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 interface ICardProps {
   title: string;
-  desription: string;
+  description: string;
   link: string;
   thumbnail: string;
 }
@@ -27,7 +27,7 @@ const { t } = useLang();
     >
       <h1 class="text-2xl md:text-3xl font-bold mb-3">{{ props.title }}</h1>
       <p class="mb-3">
-        {{ props.desription }}
+        {{ props.description }}
       </p>
       <Button
         :title="$t('pages.project.visit')"

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { TrashIcon } from "@heroicons/vue/solid";
 
 interface ITools {
   icon: string;
