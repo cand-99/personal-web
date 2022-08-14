@@ -9,12 +9,12 @@ declare module '@nuxt/schema' {
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  ssr: true,
     modules: [
       '@nuxtjs/tailwindcss',
       '@vueuse/nuxt',
       'nuxt-icons',
       '@intlify/nuxt3',
-      '@nuxt/image-edge',
     ],
 
     css: [
@@ -32,8 +32,4 @@ export default defineNuxtConfig({
       },
     },
 
-    image: {
-      // The screen sizes predefined by `@nuxt/image`:
-   
-    }
 })

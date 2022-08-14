@@ -2,7 +2,6 @@
 // composable
 const { t } = useLang()
 
-
 useHead(() => ({
   title: t("pages.404.title"),
   // meta: [
@@ -28,7 +27,7 @@ useHead(() => ({
       </p>
       <div class="mb-4 mt-6">
         <div class="mb-3 flex justify-center">
-          <Button :title="t('pages.404.button')" to="/" />
+          <Button :title="$t('pages.404.button')" to="/" />
         </div>
       </div>
     </div>
