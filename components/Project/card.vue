@@ -1,9 +1,16 @@
 <script lang="ts" setup>
+interface ITools {
+  id: number;
+  icon: string;
+  tool: string;
+
+}
 interface ICardProps {
   title: string;
   description: string;
   link: string;
   thumbnail: string;
+  tools: ITools [] ;
 }
 const props = defineProps<ICardProps>();
 const { t } = useLang();
@@ -26,9 +33,12 @@ const { t } = useLang();
       class="w-full md:w-4/12 mt-4 md:mt-0 ml-0 md:ml-8 flex flex-col justify-center"
     >
       <h1 class="text-2xl md:text-3xl font-bold mb-3">{{ props.title }}</h1>
-      <p class="mb-3">
+      <p class="text-sm md:text-base">
         {{ props.description }}
       </p>
+      <div class="flex space-x-2 p-3 mb-2 text-2xl text-gray-600 dark:text-gray-300">
+        <nuxt-icon v-for="tool in props.tools" :name="tool.icon" title="sdad" />
+      </div>
       <Button
         :title="$t('pages.project.visit')"
         :href="link"

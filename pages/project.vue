@@ -64,6 +64,7 @@ computeSelectedNames();
           :title="portofolio.title"
           :link="portofolio.link"
           :thumbnail="portofolio.thumbnail"
+          :tools="portofolio.tools"
         />
       </TransitionGroup>
     </div>
