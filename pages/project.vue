@@ -75,29 +75,24 @@ computeSelectedNames();
   @apply border-sky-500 border-b-2 !text-sky-500;
 }
 .btn {
-  @apply flex text-sm leading-6 font-semibold pt-3 pb-2.5 -mb-px text-slate-900 dark:text-slate-200 ;
+  @apply flex text-sm leading-6 font-semibold pt-3 pb-2.5 -mb-px text-slate-900 dark:text-slate-200;
 }
 .list-move, /* apply transition to moving elements */
 .list-enter-active {
-  transition: all 0.5s ease;
-  scale: 1;
+  transition: all 0.6s ease-in-out;
+  opacity: 1;
 }
 .list-leave-active {
-  transition: all 0.5s ease;
-  scale: 0.5;
-}
-
-.list-enter-from,
-.list-leave-to {
   opacity: 0;
-  scale: 0.5;
-  transform: translateY(30px);
-  z-index: -10;
-}
-
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
-.list-leave-active {
   position: absolute;
 }
+
+.list-enter-from{
+  /* transform: translateY(50%); */
+   opacity: 0;
+}
+.list-leave-to {
+  opacity: 0;
+}
+
 </style>
