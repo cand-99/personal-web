@@ -21,7 +21,7 @@ export default [
         ],
         description: 'Polres Belitung Timur ingin memiliki sistem SKCK Online untuk mempermudah masyarakat Belitung Timur dalam pembuatan SKCK. Dalam projek ini saya berperan sebagai UI/UX Designer dan berkolaborasi dengan tim developer.',
         link: 'https://skck-polresbeltim.com/',
-        thumbnail: '/tes.png'
+        thumbnail: 'images/skck-online.png'
     },
     {   id: 2,
         category: 'project',
@@ -40,7 +40,7 @@ export default [
         ],
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto doloribus officia et dicta odit itaque quod suscipit ratione ipsam praesentium!',
         link: 'https://sipora.dispora.beltim.go.id/',
-        thumbnail: '/tes.png'
+        thumbnail: 'images/sipora.png'
     },
     {   id: 3,
         category: 'project',
@@ -64,7 +64,45 @@ export default [
         ],
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto doloribus officia et dicta odit itaque quod suscipit ratione ipsam praesentium!',
         link: 'https://silaukmas.mjuasia.co.id/',
-        thumbnail: '/tes.png'
+        thumbnail: 'images/silaukmas.png'
+    },
+    {   id: 7,
+        category: 'fun-project',
+        title: 'Technikom',
+        tools : [
+            {
+                id: 5,
+                tool: 'Vue',
+                icon:'vue',
+            },
+            {
+                id: 2,
+                tool: 'Tailwindcss',
+                icon:'tailwindcss',
+            },
+        ],
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto doloribus officia et dicta odit itaque quod suscipit ratione ipsam praesentium!',
+        link: 'https://technikomsollution.com/',
+        thumbnail: 'images/technikom.png'
+    },
+    {   id: 8,
+        category: 'fun-project',
+        title: 'Personal Web',
+        tools : [
+            {
+                id: 6,
+                tool: 'Nuxt',
+                icon:'nuxt',
+            },
+            {
+                id: 2,
+                tool: 'Tailwindcss',
+                icon:'tailwindcss',
+            },
+        ],
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto doloribus officia et dicta odit itaque quod suscipit ratione ipsam praesentium!',
+        link: 'https://candra-herdiana.netlify.app/',
+        thumbnail: 'images/personalweb.png'
     },
     {   id: 4,
         category: 'fun-project',
@@ -136,25 +174,6 @@ export default [
         ],
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto doloribus officia et dicta odit itaque quod suscipit ratione ipsam praesentium!',
         link: 'https://silaukmas.mjuasia.co.id/',
-        thumbnail: '/tes.png'
-    },
-    {   id: 7,
-        category: 'project',
-        title: 'Technikom',
-        tools : [
-            {
-                id: 5,
-                tool: 'Vue',
-                icon:'vue',
-            },
-            {
-                id: 2,
-                tool: 'Tailwindcss',
-                icon:'tailwindcss',
-            },
-        ],
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto doloribus officia et dicta odit itaque quod suscipit ratione ipsam praesentium!',
-        link: 'https://technikomsollution.com/',
         thumbnail: '/tes.png'
     },
 ]

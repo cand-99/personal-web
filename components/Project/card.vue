@@ -18,7 +18,7 @@ const { t } = useLang();
 
 <template>
   <div
-    class="max-w-4xl bg-white bg-opacity-50 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl mx-auto p-4 md:p-7 rounded-3xl flex flex-col md:flex-row"
+    class="max-w-5xl bg-white bg-opacity-50 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl mx-auto p-4 md:p-7 rounded-3xl flex flex-col md:flex-row"
   >
     <figure
       class="max-w-xl max-h-80 h-full w-full md:w-8/12 rounded-2xl overflow-hidden my-auto"
@@ -38,7 +38,7 @@ const { t } = useLang();
       </p>
       <div class="my-3">
         <h1 class="font-bold mb-1">Technology</h1>
-        <div class="flex space-x-2 pb-3 text-2xl text-gray-600 dark:text-gray-300">
+        <div class="flex space-x-2 pb-1 text-2xl text-gray-600 dark:text-gray-300">
           <nuxt-icon v-for="tool in props.tools" :name="tool.icon" title="sdad" />
         </div>
       </div>
