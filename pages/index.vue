@@ -12,13 +12,25 @@ definePageMeta({
 
 useHead(() => ({
   title: t('pages.index.title'),
-  // meta: [
-  //   {
-  //     name: 'description',
-  //     content: t('pages.blank.description'),
-  //   },
-  // ],
 }))
+
+const loading = ref(false)
+const data = ref()
+// supabase
+async function fetchTask() {
+  try {
+    loading.value = true
+    const tasks = await $fetch('/api/projects')
+    data.value = tasks
+  } catch (error) {
+    console.log(error);
+    
+  } finally {
+    loading.value = false
+  }
+}
+// supabase
+
 </script>
 
 <template>
@@ -39,6 +51,15 @@ useHead(() => ({
       Frontend Developer
     </p>
     <Button :title="t('pages.about.nav')" to="/about" icon="arrow-right" class="mt-12" />
+    <button @click="fetchTask">Get data</button>
+    <p v-if="loading">loading</p>
+    <pre>{{ data }}</pre>
+    <p v-for="dat in data">
+        <p>{{ dat.title }}</p>
+          <p v-for="tool in dat.tools">
+              {{ tool.tools }}
+          </p>
+    </p>
   </div>
 </template>
 
