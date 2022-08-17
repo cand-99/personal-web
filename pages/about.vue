@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { TrashIcon } from "@heroicons/vue/solid";
 
 interface ITools {
   icon: string;
@@ -93,7 +92,7 @@ const tools = computed((): ITools[] => [
             <li>Tasikmalaya, Jawabarat</li>
             <li>99cand@gmail.com</li>
             <li
-              class="flex gap-4 mt-4 text-3xl md:text-4xl text-gray-400 dark:text-gray-300"
+              class="flex gap-4 mt-4 text-2xl md:text-3xl text-gray-400 dark:text-gray-300"
             >
               <a
                 href="https://github.com/cand-99"
