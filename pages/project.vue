@@ -22,9 +22,9 @@ watch(projectCategory, (newProjectCategory) => {
 });
 const computeSelectedProject = async () => {
   const filteredProject = datas.value.filter(
-    (name) => name.category === projectCategory.value
+    (name: any) => name.category === projectCategory.value
   );
-  projects.value = filteredProject.map((name) => name);
+  projects.value = filteredProject.map((name: any) => name);
 };
 
 async function getProject() {

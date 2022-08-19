@@ -8,13 +8,9 @@ definePageMeta({
     mode: "out-in",
   },
 });
-
 useHead(() => ({
   title: t('pages.index.title'),
 }))
-
-// supabase
-
 </script>
 
 <template>

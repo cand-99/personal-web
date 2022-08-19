@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 interface ITools {
   icon: string;
   link: string
@@ -16,12 +15,6 @@ const { t } = useLang();
 
 useHead(() => ({
   title: t("pages.about.title"),
-  // meta: [
-  //   {
-  //     name: "description",
-  //     content: t("pages.blank.description"),
-  //   },
-  // ],
 }));
 
 const tools = computed((): ITools[] => [
