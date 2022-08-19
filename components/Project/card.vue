@@ -25,7 +25,7 @@ const { t } = useLang();
     >
       <img
         class="object-contain w-full h-full"
-        :src="props.thumbnail"
+        :src="`https://btimmzyxvpgqmxfswutt.supabase.co/storage/v1/object/public/portofolios/${props.thumbnail}`"
         alt="portofolio"
       />
     </figure>

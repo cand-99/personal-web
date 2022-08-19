@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import portofolios from "../content/portofolio";
-
 definePageMeta({
   pageTransition: {
     name: "fade",
@@ -15,23 +13,38 @@ useHead(() => ({
 
 const projectCategory = ref("project");
 const projects = ref([]);
+const loading = ref(false);
+const datas = ref();
 
 // single ref
 watch(projectCategory, (newProjectCategory) => {
-  computeSelectedNames();
+  computeSelectedProject();
 });
-
-const computeSelectedNames = () => {
-  const filteredProject = portofolios.filter(
+const computeSelectedProject = async () => {
+  const filteredProject = datas.value.filter(
     (name) => name.category === projectCategory.value
   );
   projects.value = filteredProject.map((name) => name);
 };
-computeSelectedNames();
+
+async function getProject() {
+  try {
+    loading.value = true;
+    const data = await $fetch("/api/projects");
+    datas.value = data;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.value = false;
+    computeSelectedProject();
+  }
+}
+
+getProject();
 </script>
 
 <template>
-  <div>
+  <div class="z-10">
     <h1 class="font-bold text-5xl md:text-7xl text-center tracking-tight mb-8">
       {{ $t("pages.project.nav") }}
     </h1>
@@ -54,8 +67,8 @@ computeSelectedNames();
         Fun Project
       </button>
     </div>
-
-    <div class="space-y-8">
+    <div v-if="loading">Loading</div>
+    <div v-else class="space-y-8">
       <TransitionGroup name="list" mode="out-in">
         <ProjectCard
           v-for="portofolio in projects"
@@ -88,12 +101,11 @@ computeSelectedNames();
   position: absolute;
 }
 
-.list-enter-from{
+.list-enter-from {
   /* transform: translateY(50%); */
-   opacity: 0;
+  opacity: 0;
 }
 .list-leave-to {
   opacity: 0;
 }
-
 </style>

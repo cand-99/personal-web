@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // composable
 const { t } = useLang()
-const supabase = useSupabaseClient()
 //meta
 definePageMeta({
   pageTransition: {
@@ -14,50 +13,12 @@ useHead(() => ({
   title: t('pages.index.title'),
 }))
 
-const loading = ref(false)
-const data = ref()
-// supabase
-async function fetchTask() {
-  try {
-    loading.value = true
-    const tasks = await $fetch('/api/projects')
-    data.value = tasks
-  } catch (error) {
-    console.log(error);
-    
-  } finally {
-    loading.value = false
-  }
-}
-async function tes() {
-  try {
-    loading.value = true
-    const tasks = await $fetch('/api/tes')
-    data.value = tasks
-  } catch (error) {
-    console.log(error);
-    
-  } finally {
-    loading.value = false
-  }
-}
-async function direct() {
-  try {
-    loading.value = true
-    const tasks = await supabase.from('projects').select()
-    data.value = tasks
-  } catch (error) {
-    console.log(error);
-    
-  } finally {
-    loading.value = false
-  }
-}
 // supabase
 
 </script>
 
 <template>
+<div class="z-10 my-auto">
   <div
     class="text-center max-w-4xl w-full mx-auto bg-white bg-opacity-50 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl py-8 px-6 md:p-32 rounded-3xl"
   >
@@ -75,18 +36,8 @@ async function direct() {
       Frontend Developer
     </p>
     <Button :title="t('pages.about.nav')" to="/about" icon="arrow-right" class="mt-12" />
-    <button @click="fetchTask">Get data</button>
-    <button @click="tes">tes Get data</button>
-    <button @click="direct">Direct</button>
-    <p v-if="loading">loading</p>
-    <pre>{{ data }}</pre>
-    <p v-for="dat in data">
-        <p>{{ dat.title }}</p>
-          <p v-for="tool in dat.tools">
-              {{ tool.tools }}
-          </p>
-    </p>
   </div>
+</div>
 </template>
 
 <style scoped></style>
