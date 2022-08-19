@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // composable
 const { t } = useLang()
-
+const supabase = useSupabaseClient()
 //meta
 definePageMeta({
   pageTransition: {
@@ -21,6 +21,30 @@ async function fetchTask() {
   try {
     loading.value = true
     const tasks = await $fetch('/api/projects')
+    data.value = tasks
+  } catch (error) {
+    console.log(error);
+    
+  } finally {
+    loading.value = false
+  }
+}
+async function tes() {
+  try {
+    loading.value = true
+    const tasks = await $fetch('/api/tes')
+    data.value = tasks
+  } catch (error) {
+    console.log(error);
+    
+  } finally {
+    loading.value = false
+  }
+}
+async function direct() {
+  try {
+    loading.value = true
+    const tasks = await supabase.from('projects').select()
     data.value = tasks
   } catch (error) {
     console.log(error);
@@ -52,6 +76,8 @@ async function fetchTask() {
     </p>
     <Button :title="t('pages.about.nav')" to="/about" icon="arrow-right" class="mt-12" />
     <button @click="fetchTask">Get data</button>
+    <button @click="tes">tes Get data</button>
+    <button @click="direct">Direct</button>
     <p v-if="loading">loading</p>
     <pre>{{ data }}</pre>
     <p v-for="dat in data">
