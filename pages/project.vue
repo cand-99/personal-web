@@ -58,14 +58,14 @@ getProject();
         @click="projectCategory = 'team-project'"
         class="btn"
       >
-        Team Project
+        {{ $t("pages.project.team-project") }}
       </button>
       <button
         :class="projectCategory === 'personal-project' && 'active'"
         @click="projectCategory = 'personal-project'"
         class="btn"
       >
-        Personal Project
+        {{ $t("pages.project.personal-project") }}
       </button>
     </div>
     <Skeleton v-if="isLoading" v-for="x in 1" />

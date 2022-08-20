@@ -14,7 +14,7 @@ useHead(() => ({
 </script>
 
 <template>
-    <div class="container mx-auto flex justify-center items-center">
+    <div class="container mx-auto flex justify-center items-center my-auto z-10">
     <div class="w-full lg:w-1/3 px-10 lg:px-0">
       <h1 class="text-center mt-6 mb-8 text-6xl md:text-8xl font-bold">
         404
