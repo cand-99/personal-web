@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-interface ITools {
+interface ITechnology {
   id: number;
   icon: string;
   tools: string;
@@ -10,7 +10,7 @@ interface ICardProps {
   description: string;
   link: string;
   thumbnail: string;
-  tools: ITools [] ;
+  technology: ITechnology [] ;
 }
 const props = defineProps<ICardProps>();
 const { t } = useLang();
@@ -39,7 +39,7 @@ const { t } = useLang();
       <div class="my-3">
         <h1 class="font-bold mb-1">Technology</h1>
         <div class="flex space-x-2 pb-1 text-2xl text-gray-600 dark:text-gray-300">
-          <nuxt-icon v-for="tool in props.tools" :name="tool.icon" :title="tool.tools" />
+          <nuxt-icon v-for="tool in props.technology" :name="tool.icon" :title="tool.tools" />
         </div>
       </div>
       <Button

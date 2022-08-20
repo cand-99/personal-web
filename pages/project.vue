@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 definePageMeta({
   pageTransition: {
     name: "fade",
@@ -78,7 +79,7 @@ getProject();
           :title="portofolio.title"
           :link="portofolio.link"
           :thumbnail="portofolio.thumbnail"
-          :tools="portofolio.tools"
+          :technology="portofolio.technology"
         />
       </TransitionGroup>
     </div>
