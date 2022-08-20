@@ -13,13 +13,14 @@ useHead(() => ({
 
 const projectCategory = ref("project");
 const projects = ref([]);
-const loading = ref(false);
+const isLoading = ref(false);
 const datas = ref();
 
 // single ref
 watch(projectCategory, (newProjectCategory) => {
   computeSelectedProject();
 });
+
 const computeSelectedProject = async () => {
   const filteredProject = datas.value.filter(
     (name: any) => name.category === projectCategory.value
@@ -29,13 +30,13 @@ const computeSelectedProject = async () => {
 
 async function getProject() {
   try {
-    loading.value = true;
+    isLoading.value = true;
     const data = await $fetch("/api/projects");
     datas.value = data;
   } catch (error) {
     console.log(error);
   } finally {
-    loading.value = false;
+    isLoading.value = false;
     computeSelectedProject();
   }
 }
@@ -67,9 +68,9 @@ getProject();
         Fun Project
       </button>
     </div>
-    <div v-if="loading">Loading</div>
+    <Skeleton v-if="isLoading" v-for="x in 1" />
     <div v-else class="space-y-8">
-      <TransitionGroup name="list" mode="out-in">
+      <TransitionGroup name="list">
         <ProjectCard
           v-for="portofolio in projects"
           :key="portofolio.title"
