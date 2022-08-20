@@ -2,7 +2,7 @@
 interface ITools {
   id: number;
   icon: string;
-  tool: string;
+  tools: string;
 
 }
 interface ICardProps {
@@ -39,7 +39,7 @@ const { t } = useLang();
       <div class="my-3">
         <h1 class="font-bold mb-1">Technology</h1>
         <div class="flex space-x-2 pb-1 text-2xl text-gray-600 dark:text-gray-300">
-          <nuxt-icon v-for="tool in props.tools" :name="tool.icon" title="sdad" />
+          <nuxt-icon v-for="tool in props.tools" :name="tool.icon" :title="tool.tools" />
         </div>
       </div>
       <Button
