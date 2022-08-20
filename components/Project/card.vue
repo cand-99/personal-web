@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-interface ITools {
+interface ITechnology {
   id: number;
   icon: string;
-  tool: string;
+  tools: string;
 
 }
 interface ICardProps {
@@ -10,7 +10,7 @@ interface ICardProps {
   description: string;
   link: string;
   thumbnail: string;
-  tools: ITools [] ;
+  technology: ITechnology [] ;
 }
 const props = defineProps<ICardProps>();
 const { t } = useLang();
@@ -25,7 +25,7 @@ const { t } = useLang();
     >
       <img
         class="object-contain w-full h-full"
-        :src="props.thumbnail"
+        :src="`https://btimmzyxvpgqmxfswutt.supabase.co/storage/v1/object/public/portofolios/${props.thumbnail}`"
         alt="portofolio"
       />
     </figure>
@@ -39,7 +39,7 @@ const { t } = useLang();
       <div class="my-3">
         <h1 class="font-bold mb-1">Technology</h1>
         <div class="flex space-x-2 pb-1 text-2xl text-gray-600 dark:text-gray-300">
-          <nuxt-icon v-for="tool in props.tools" :name="tool.icon" title="sdad" />
+          <nuxt-icon v-for="tool in props.technology" :name="tool.icon" :title="tool.tools" />
         </div>
       </div>
       <Button

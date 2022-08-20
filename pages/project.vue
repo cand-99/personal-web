@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import portofolios from "../content/portofolio";
 
 definePageMeta({
   pageTransition: {
@@ -13,25 +12,41 @@ useHead(() => ({
   title: t("pages.project.title"),
 }));
 
-const projectCategory = ref("project");
+const projectCategory = ref("team-project");
 const projects = ref([]);
+const isLoading = ref(false);
+const datas = ref();
 
 // single ref
 watch(projectCategory, (newProjectCategory) => {
-  computeSelectedNames();
+  computeSelectedProject();
 });
 
-const computeSelectedNames = () => {
-  const filteredProject = portofolios.filter(
-    (name) => name.category === projectCategory.value
+const computeSelectedProject = async () => {
+  const filteredProject = datas.value.filter(
+    (name: any) => name.category === projectCategory.value
   );
-  projects.value = filteredProject.map((name) => name);
+  projects.value = filteredProject.map((name: any) => name);
 };
-computeSelectedNames();
+
+async function getProject() {
+  try {
+    isLoading.value = true;
+    const data = await $fetch("/api/projects");
+    datas.value = data;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    isLoading.value = false;
+    computeSelectedProject();
+  }
+}
+
+getProject();
 </script>
 
 <template>
-  <div>
+  <div class="z-10">
     <h1 class="font-bold text-5xl md:text-7xl text-center tracking-tight mb-8">
       {{ $t("pages.project.nav") }}
     </h1>
@@ -40,23 +55,23 @@ computeSelectedNames();
       class="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5 justify-center mb-8"
     >
       <button
-        :class="projectCategory === 'project' && 'active'"
-        @click="projectCategory = 'project'"
+        :class="projectCategory === 'team-project' && 'active'"
+        @click="projectCategory = 'team-project'"
         class="btn"
       >
-        Project
+        {{ $t("pages.project.team-project") }}
       </button>
       <button
-        :class="projectCategory === 'fun-project' && 'active'"
-        @click="projectCategory = 'fun-project'"
+        :class="projectCategory === 'personal-project' && 'active'"
+        @click="projectCategory = 'personal-project'"
         class="btn"
       >
-        Fun Project
+        {{ $t("pages.project.personal-project") }}
       </button>
     </div>
-
-    <div class="space-y-8">
-      <TransitionGroup name="list" mode="out-in">
+    <Skeleton v-if="isLoading" v-for="x in 1" />
+    <div v-else class="space-y-8">
+      <TransitionGroup name="list">
         <ProjectCard
           v-for="portofolio in projects"
           :key="portofolio.title"
@@ -64,7 +79,7 @@ computeSelectedNames();
           :title="portofolio.title"
           :link="portofolio.link"
           :thumbnail="portofolio.thumbnail"
-          :tools="portofolio.tools"
+          :technology="portofolio.technology"
         />
       </TransitionGroup>
     </div>
@@ -88,12 +103,11 @@ computeSelectedNames();
   position: absolute;
 }
 
-.list-enter-from{
+.list-enter-from {
   /* transform: translateY(50%); */
-   opacity: 0;
+  opacity: 0;
 }
 .list-leave-to {
   opacity: 0;
 }
-
 </style>
