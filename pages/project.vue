@@ -11,7 +11,7 @@ useHead(() => ({
   title: t("pages.project.title"),
 }));
 
-const projectCategory = ref("project");
+const projectCategory = ref("team-project");
 const projects = ref([]);
 const isLoading = ref(false);
 const datas = ref();
@@ -54,18 +54,18 @@ getProject();
       class="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5 justify-center mb-8"
     >
       <button
-        :class="projectCategory === 'project' && 'active'"
-        @click="projectCategory = 'project'"
+        :class="projectCategory === 'team-project' && 'active'"
+        @click="projectCategory = 'team-project'"
         class="btn"
       >
-        Project
+        Team Project
       </button>
       <button
-        :class="projectCategory === 'fun-project' && 'active'"
-        @click="projectCategory = 'fun-project'"
+        :class="projectCategory === 'personal-project' && 'active'"
+        @click="projectCategory = 'personal-project'"
         class="btn"
       >
-        Fun Project
+        Personal Project
       </button>
     </div>
     <Skeleton v-if="isLoading" v-for="x in 1" />
