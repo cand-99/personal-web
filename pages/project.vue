@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 definePageMeta({
   pageTransition: {
     name: "fade",
@@ -42,12 +41,9 @@ async function getProject() {
   }
 }
 
-if (!datas.value){
+if (!datas.value) {
   getProject();
-}else computeSelectedProject();
-
-
-
+} else computeSelectedProject();
 </script>
 
 <template>
@@ -55,11 +51,11 @@ if (!datas.value){
     <h1 class="font-bold text-5xl md:text-7xl text-center tracking-tight mb-8">
       {{ $t("pages.project.nav") }}
     </h1>
-
     <div
       class="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5 justify-center mb-8"
     >
       <button
+        :disabled="isLoading"
         :class="projectCategory === 'team-project' && 'active'"
         @click="projectCategory = 'team-project'"
         class="btn"
@@ -67,6 +63,7 @@ if (!datas.value){
         {{ $t("pages.project.team-project") }}
       </button>
       <button
+        :disabled="isLoading"
         :class="projectCategory === 'personal-project' && 'active'"
         @click="projectCategory = 'personal-project'"
         class="btn"
