@@ -15,7 +15,7 @@ useHead(() => ({
 const projectCategory = ref("team-project");
 const projects = ref([]);
 const isLoading = ref(false);
-const datas = ref();
+const datas = useProjects();
 
 // single ref
 watch(projectCategory, (newProjectCategory) => {
@@ -42,7 +42,12 @@ async function getProject() {
   }
 }
 
-getProject();
+if (!datas.value){
+  getProject();
+}else computeSelectedProject();
+
+
+
 </script>
 
 <template>
