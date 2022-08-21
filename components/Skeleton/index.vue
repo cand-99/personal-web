@@ -7,7 +7,7 @@
     <figure
       class="max-w-xl max-h-80 h-full w-full md:w-8/12 rounded-2xl overflow-hidden my-auto"
     >
-      <div class="object-contain w-full bg-gray-300 animate-pulse h-[290px] max-w-[576px]" />
+      <div class="object-contain w-full bg-gray-300 animate-pulse h-[174px] md:h-[290px] max-w-[576px]" />
     </figure>
     <div
       class="w-full md:w-4/12 mt-4 md:mt-0 ml-0 md:ml-8 flex flex-col justify-center"
