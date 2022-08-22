@@ -3,6 +3,9 @@ interface ITools {
   icon: string;
   link: string
 }
+interface IAbout {
+ name?: string
+}
 
 definePageMeta({
   pageTransition: {
@@ -35,6 +38,27 @@ const tools = computed((): ITools[] => [
     link: "https://laravel.com/",
   },
 ]);
+
+const abouts = useAbout()
+const isLoading = ref(false)
+
+async function getAbout() {
+  try {
+    isLoading.value = true
+    const data = await $fetch("/api/about");
+    abouts.value = data[0]
+    
+  } catch (error) {
+    console.log(error);
+  } finally {
+    isLoading.value = false
+  }
+}
+
+if(!abouts.value){
+  getAbout()
+}
+
 </script>
 
 <template>
@@ -42,7 +66,7 @@ const tools = computed((): ITools[] => [
     class="text-center max-w-4xl w-full mx-auto bg-white bg-opacity-40 dark:bg-opacity-0 dark:backdrop-blur-0 backdrop-blur-xl py-8 px-1 md:p-32 rounded-3xl z-10"
   >
     <h1 class="font-bold text-5xl md:text-7xl text-center tracking-tight">
-      Candra
+      {{ abouts.name }}
     </h1>
     <h2
       class="mt-4 text-xl md:text-2xl text-center text-gray-500 dark:text-gray-300"
