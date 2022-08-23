@@ -19,9 +19,9 @@ const navBlobClass = computed(() => {
     <nav
       class="relative z-10 flex space-x-4 md:space-x-6 items-center text-sm md:text-base font-medium"
     >
-      <NuxtLink to="/">{{ $t('pages.index.nav') }}</NuxtLink>
-      <NuxtLink to="/about">{{ $t('pages.about.nav') }}</NuxtLink>
-      <NuxtLink to="/project">{{ $t('pages.project.nav') }}</NuxtLink>
+      <NuxtLink to="/">{{ $t("pages.index.nav") }}</NuxtLink>
+      <NuxtLink to="/about">{{ $t("pages.about.nav") }}</NuxtLink>
+      <NuxtLink to="/project">{{ $t("pages.project.nav") }}</NuxtLink>
       <Blob :class="navBlobClass" class="w-7 h-7 -top-1 blur-xl" />
     </nav>
     <div

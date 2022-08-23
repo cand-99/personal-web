@@ -12,7 +12,8 @@ useHead(() => ({
   title: t("pages.about.title"),
 }));
 
-const { data: abouts, pending, error, refresh } = await useFetch("/api/about");
+const { data: abouts } = await useFetch("/api/about");
+
 </script>
 
 <template>
