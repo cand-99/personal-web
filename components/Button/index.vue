@@ -6,7 +6,6 @@ interface IButtonProps {
   href?: string;
 }
 
-
 const props = defineProps<IButtonProps>();
 </script>
 

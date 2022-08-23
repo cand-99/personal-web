@@ -17,6 +17,7 @@ setMeta(t('pages.index.title'));
       class="bg-white dark:bg-dark transition duration-300 text-gray-900 dark:text-gray-200 relative"
     >
       <NuxtLayout>
+         <NuxtLoadingIndicator />
         <NuxtPage />
       </NuxtLayout>
       <BlobGroup />

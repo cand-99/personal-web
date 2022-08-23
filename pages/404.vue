@@ -4,12 +4,6 @@ const { t } = useLang()
 
 useHead(() => ({
   title: t("pages.404.title"),
-  // meta: [
-  //   {
-  //     name: "description",
-  //     content: t("pages.blank.description"),
-  //   },
-  // ],
 }));
 </script>
 
