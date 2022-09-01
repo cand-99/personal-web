@@ -36,21 +36,12 @@ export default defineNuxtConfig({
 
     pwa: {
       meta: {
-        mobileAppIOS: true,
-        lang: 'ja'
-      },
-      manifest: {
-        lang: 'ja',
-        name: 'Nuxt3 SSR with PWA',
-        short_name: 'PWA/Nuxt3',
-        display: 'standalone',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
-        start_url: 'https://candra-herdiana.netlify.app/'
+        // Generate splash screens for iOS
+        mobileAppIOS: true
       },
       workbox: {
-        enabled: false
+        enabled: true
       }
-    }
+    },
 
 })
