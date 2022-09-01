@@ -15,7 +15,8 @@ export default defineNuxtConfig({
       '@vueuse/nuxt',
       'nuxt-icons',
       '@intlify/nuxt3',
-      '@nuxtjs/supabase'
+      '@nuxtjs/supabase',
+      '@kevinmarrec/nuxt-pwa'
     ],
 
     css: [
@@ -32,5 +33,24 @@ export default defineNuxtConfig({
         availableLocales: ['en', 'id', 'ja', 'ko'],
       },
     },
+
+    pwa: {
+      meta: {
+        mobileAppIOS: true,
+        lang: 'ja'
+      },
+      manifest: {
+        lang: 'ja',
+        name: 'Nuxt3 SSR with PWA',
+        short_name: 'PWA/Nuxt3',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        start_url: 'https://candra-herdiana.netlify.app/'
+      },
+      workbox: {
+        enabled: false
+      }
+    }
 
 })
