@@ -1,6 +1,6 @@
 export const useCustomMeta = () => {
   let defaultDesc =
-    "Candra Herdiana - Self-taught Frontend Developer from Indonesia. I love building fun projects during my free time!"
+    "Candra Herdiana - Hey, I'm Candra, I'm a Front end web developer with experiences in web programming especially VueJS framework. I love building fun projects during my free time!"
   let defaultImage = "https://candra-herdiana.netlify.app/og.png"
 
   const setMeta = (title: string, desc = defaultDesc, image = defaultImage) => {

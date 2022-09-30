@@ -73,6 +73,15 @@ const { data: abouts } = await useFetch("/api/about");
                   <nuxt-icon name="github" />
                 </a>
                 <a
+                  href="https://www.linkedin.com/in/candra-herdiana-9064b024a/"
+                  class="hover:text-gray-600 dark:hover:text-gray-100"
+                  target="_blank"
+                  aria-label="instagram"
+                  rel="noopener noreferrer"
+                >
+                  <nuxt-icon name="linkedin" />
+                </a>
+                <a
                   href="https://www.instagram.com/candfpv"
                   class="hover:text-gray-600 dark:hover:text-gray-100"
                   target="_blank"
