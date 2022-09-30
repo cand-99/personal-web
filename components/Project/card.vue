@@ -23,11 +23,9 @@ const { t } = useLang();
     <figure
       class="max-w-xl max-h-80 h-full w-full md:w-8/12 rounded-2xl overflow-hidden my-auto"
     >
-      <img
-        class="object-contain w-full h-full"
-        :src="`https://btimmzyxvpgqmxfswutt.supabase.co/storage/v1/object/public/portofolios/${props.thumbnail}`"
-        alt="portofolio"
-      />
+      <div>
+        <TwicImg  :src="`/personal/${props.thumbnail}`" class="h-80" ratio="none" alt="project image"/>
+      </div>
     </figure>
     <div
       class="w-full md:w-4/12 mt-4 md:mt-0 ml-0 md:ml-8 flex flex-col justify-center"
@@ -52,4 +50,6 @@ const { t } = useLang();
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
