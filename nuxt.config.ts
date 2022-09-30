@@ -16,7 +16,8 @@ export default defineNuxtConfig({
       'nuxt-icons',
       '@intlify/nuxt3',
       '@nuxtjs/supabase',
-      '@kevinmarrec/nuxt-pwa'
+      '@kevinmarrec/nuxt-pwa',
+      '@twicpics/components/nuxt3'
     ],
 
     css: [
@@ -35,6 +36,9 @@ export default defineNuxtConfig({
     },
 
     pwa: {
+      manifest: {
+        name: 'Candra Herdiana',
+      },
       meta: {
         // Generate splash screens for iOS
         mobileAppIOS: true
@@ -42,6 +46,12 @@ export default defineNuxtConfig({
       workbox: {
         enabled: true
       }
+    },
+
+    twicpics: {
+      domain: `https://candra-app.twic.pics`,
+      anticipation: 0.5,
+      step: 50,
     },
 
 })
