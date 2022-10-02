@@ -10,6 +10,7 @@ interface ICardProps {
   description: string;
   link: string;
   thumbnail: string;
+  project_start: string
   technology: ITechnology [] ;
 }
 const props = defineProps<ICardProps>();
@@ -35,7 +36,10 @@ const { t } = useLang();
         {{ props.description }}
       </p>
       <div class="my-3">
-        <h1 class="font-bold mb-1">Technology</h1>
+        <div class="flex justify-between">
+          <h1 class="font-bold mb-1">Technology</h1>
+          <h1 class="text-xs">{{ props.project_start }}</h1>
+        </div>
         <div class="flex space-x-2 pb-1 text-2xl text-gray-600 dark:text-gray-300">
           <nuxt-icon v-for="tool in props.technology" :name="tool.icon" :title="tool.tools" />
         </div>

@@ -82,6 +82,7 @@ if (!datas.value) {
           :link="portofolio.link"
           :thumbnail="portofolio.thumbnail"
           :technology="portofolio.technology"
+          :project_start="portofolio.project_start"
         />
       </TransitionGroup>
     </div>
