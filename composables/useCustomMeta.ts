@@ -1,7 +1,7 @@
 export const useCustomMeta = () => {
   let defaultDesc =
     "Candra Herdiana - Hey, I'm Candra, I'm a Front end web developer with experiences in web programming especially VueJS framework. I love building fun projects during my free time!"
-  let defaultImage = "https://candra-herdiana.netlify.app/og.png"
+  let defaultImage = "https://www.candraherdiana.site/og.png"
 
   const setMeta = (title: string, desc = defaultDesc, image = defaultImage) => {
     useMeta({
@@ -14,7 +14,7 @@ export const useCustomMeta = () => {
         { name: "og:site_name", content: "Candra Herdiana" },
         { name: "og:description", content: desc },
         { name: "og:type", content: "website" },
-        { name: "og:url", content: "https://candra-herdiana.netlify.app/" },
+        { name: "og:url", content: "https://www.candraherdiana.site/" },
         { name: "og:image", content: image },
 
         { name: "twitter:card", content: "summary_large_image" },
