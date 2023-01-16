@@ -12,7 +12,7 @@ setMeta(t('pages.index.title'));
 </script>
 
 <template>
-  <Html :class="`${theme === 'dark' ? 'dark' : ''}`" :lang="locale">
+  <Html :class="`${theme === 'dark' ? 'dark bg-dark' : 'bg-white'}`" :lang="locale">
     <div
       class="bg-white dark:bg-dark transition duration-300 text-gray-900 dark:text-gray-200 relative"
     >

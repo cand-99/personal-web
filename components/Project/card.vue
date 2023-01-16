@@ -25,7 +25,7 @@ const { t } = useLang();
       class="max-w-xl max-h-80 h-full w-full md:w-8/12 rounded-2xl overflow-hidden my-auto"
     >
       <div>
-        <TwicImg  :src="`/personal/${props.thumbnail}`" class="h-80" ratio="none" alt="project image"/>
+        <TwicImg  :src="`/personal/${props.thumbnail}`" class="h-48 md:h-80" ratio="none" alt="project image"/>
       </div>
     </figure>
     <div
