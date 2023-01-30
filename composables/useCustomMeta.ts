@@ -10,9 +10,6 @@ export const useCustomMeta = () => {
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "description", content: desc },
-        { name: "og:title", content: title },
-        { name: "og:site_name", content: "Candra Herdiana" },
-        { name: "og:description", content: desc },
         { name: "og:type", content: "website" },
         { name: "og:url", content: "https://www.candraherdiana.site/" },
         { name: "og:image", content: image },
@@ -24,7 +21,7 @@ export const useCustomMeta = () => {
         { name: "twitter:description", content: desc },
         { name: "twitter:image", content: image },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [{ rel: "icon", type: "image/png", href: "/icon.png" }],
     })
   }
 
