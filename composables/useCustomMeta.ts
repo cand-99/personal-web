@@ -1,6 +1,6 @@
 export const useCustomMeta = () => {
   let defaultDesc =
-    "Candra Herdiana - Hey, I'm Candra, I'm a Front end web developer with experiences in web programming especially VueJS framework. I love building fun projects during my free time!"
+    "Candra Herdiana - Hey, I'm Candra, I'm a Front End web developer with experiences in web programming especially VueJS framework. I love building fun projects during my free time!"
   let defaultImage = "https://www.candraherdiana.site/og.png"
 
   const setMeta = (title: string, desc = defaultDesc, image = defaultImage) => {
@@ -10,6 +10,7 @@ export const useCustomMeta = () => {
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "description", content: desc },
+        { name: "og:description", content: desc },
         { name: "og:url", content: "https://www.candraherdiana.site/" },
         { name: "og:image", content: image },
 

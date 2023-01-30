@@ -43,7 +43,6 @@ export default defineNuxtConfig({
         // Generate splash screens for iOS
         mobileAppIOS: true,
         name: 'Candra Herdiana',
-        ogDescription: "Candra Herdiana - Hey, I'm Candra, I'm a Front end web developer with experiences in web programming especially VueJS framework. I love building fun projects during my free time!",
       },
       workbox: {
         enabled: true
